@@ -62,7 +62,8 @@ def _save_checkpoint(train_data, batch):
 def train_model(train_data):
     td = train_data
 
-    summaries = tf.summary.merge_all()
+    summary_writer = tf.summary.FileWriter(FLAGS.log_dir, td.sess.graph)
+
     td.sess.run(tf.global_variables_initializer())
 
     lrval       = FLAGS.learning_rate_start
@@ -77,11 +78,12 @@ def train_model(train_data):
 
     while not done:
         batch += 1
-        gene_loss = disc_real_loss = disc_fake_loss = -1.234
+
 
         feed_dict = {td.learning_rate : lrval}
 
         ops = [td.gene_minimize, td.disc_minimize, td.gene_loss, td.disc_real_loss, td.disc_fake_loss]
+
         _, _, gene_loss, disc_real_loss, disc_fake_loss = td.sess.run(ops, feed_dict=feed_dict)
         
         if batch % 10 == 0:
@@ -108,7 +110,7 @@ def train_model(train_data):
 
             merged_summary_op = tf.summary.merge_all()
             summary_str = td.sess.run(merged_summary_op)
-            td.summary_writer.add_summary(summary_str, batch)
+            summary_writer.add_summary(summary_str, batch)
             
         if batch % FLAGS.checkpoint_period == 0:
             # Save checkpoint

@@ -28,7 +28,7 @@ tf.app.flags.DEFINE_string('dataset', 'dataset',
 tf.app.flags.DEFINE_float('epsilon', 1e-8,
                           "Fuzz term to avoid numerical instability")
 
-tf.app.flags.DEFINE_string('run', 'demo',
+tf.app.flags.DEFINE_string('run', 'train',
                             "Which operation to run. [demo|train]")
 
 tf.app.flags.DEFINE_float('gene_l1_factor', .90,
@@ -49,7 +49,7 @@ tf.app.flags.DEFINE_bool('log_device_placement', False,
 tf.app.flags.DEFINE_integer('sample_size', 64,
                             "Image sample size in pixels. Range [64,128]")
 
-tf.app.flags.DEFINE_integer('summary_period', 200,
+tf.app.flags.DEFINE_integer('summary_period', 10,
                             "Number of batches between summary data dumps")
 
 tf.app.flags.DEFINE_integer('random_seed', 0,
@@ -58,10 +58,16 @@ tf.app.flags.DEFINE_integer('random_seed', 0,
 tf.app.flags.DEFINE_integer('test_vectors', 16,
                             """Number of features to use for testing""")
                             
-tf.app.flags.DEFINE_string('train_dir', 'train',
+tf.app.flags.DEFINE_string('log_dir', 'log',
                            "Output folder where training logs are dumped.")
 
-tf.app.flags.DEFINE_integer('train_time', 20,
+tf.app.flags.DEFINE_string('train_dir', 'train',
+                           "Output folder where test images are dumped.")
+
+tf.app.flags.DEFINE_string('gpu_string', '/gpu:0',
+                           "Output folder where training logs are dumped.")
+
+tf.app.flags.DEFINE_integer('train_time', 200000,
                             "Time in minutes to train the model")
 
 def prepare_dirs(delete_train_dir=False):
@@ -100,8 +106,9 @@ def setup_tensorflow():
     random.seed(FLAGS.random_seed)
     np.random.seed(FLAGS.random_seed)
 
-    summary_writer = tf.train.SummaryWriter(FLAGS.train_dir, sess.graph)
-
+    summary_writer = tf.summary.FileWriter(FLAGS.log_dir, sess.graph)
+    #tf.summary.FileWriter   new version
+    #tf.train.SummaryWriter  old version
     return sess, summary_writer
 
 def _demo():
@@ -169,7 +176,7 @@ def _train():
     disc_real_loss, disc_fake_loss = \
                      srez_model.create_discriminator_loss(disc_real_output, disc_fake_output)
     disc_loss = tf.add(disc_real_loss, disc_fake_loss, name='disc_loss')
-    
+
     (global_step, learning_rate, gene_minimize, disc_minimize) = \
             srez_model.create_optimizers(gene_loss, gene_var_list,
                                          disc_loss, disc_var_list)
@@ -177,6 +184,7 @@ def _train():
     # Train model
     train_data = TrainData(locals())
     srez_train.train_model(train_data)
+
 
 def main(argv=None):
     # Training or showing off?
@@ -188,3 +196,4 @@ def main(argv=None):
 
 if __name__ == '__main__':
   tf.app.run()
+

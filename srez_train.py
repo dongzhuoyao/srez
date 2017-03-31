@@ -19,10 +19,10 @@ def _summarize_progress(train_data, feature, label, gene_output, batch, suffix, 
 
     clipped = tf.maximum(tf.minimum(gene_output, 1.0), 0.0)
 
-    image   = tf.concat(2, [nearest, bicubic, clipped, label])
+    image   = tf.concat([nearest, bicubic, clipped, label],2)
 
     image = image[0:max_samples,:,:,:]
-    image = tf.concat(0, [image[i,:,:,:] for i in range(max_samples)])
+    image = tf.concat([image[i,:,:,:] for i in range(max_samples)],0)
     image = td.sess.run(image)
 
     filename = 'batch%06d_%s.png' % (batch, suffix)
@@ -62,8 +62,8 @@ def _save_checkpoint(train_data, batch):
 def train_model(train_data):
     td = train_data
 
-    summaries = tf.merge_all_summaries()
-    td.sess.run(tf.initialize_all_variables())
+    summaries = tf.summary.merge_all()
+    td.sess.run(tf.global_variables_initializer())
 
     lrval       = FLAGS.learning_rate_start
     start_time  = time.time()
@@ -105,6 +105,10 @@ def train_model(train_data):
             feed_dict = {td.gene_minput: test_feature}
             gene_output = td.sess.run(td.gene_moutput, feed_dict=feed_dict)
             _summarize_progress(td, test_feature, test_label, gene_output, batch, 'out')
+
+            merged_summary_op = tf.summary.merge_all()
+            summary_str = td.sess.run(merged_summary_op)
+            td.summary_writer.add_summary(summary_str, batch)
             
         if batch % FLAGS.checkpoint_period == 0:
             # Save checkpoint

@@ -1,0 +1,143 @@
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcublas.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcufft.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcurand.so.8.0 locally
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: TITAN X (Pascal)
+major: 6 minor: 1 memoryClockRate (GHz) 1.531
+pciBusID 0000:01:00.0
+Total memory: 11.93GiB
+Free memory: 11.45GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: TITAN X (Pascal), pci bus id: 0000:01:00.0)
+Progress[  0%], ETA[200000m], Batch [  10], G_Loss[0.184], D_Real_Loss[1.057], D_Fake_Loss[0.857]
+    Saved train/batch000010_out.png
+Progress[  0%], ETA[200000m], Batch [  20], G_Loss[0.151], D_Real_Loss[0.743], D_Fake_Loss[0.716]
+    Saved train/batch000020_out.png
+Progress[  0%], ETA[200000m], Batch [  30], G_Loss[0.148], D_Real_Loss[0.772], D_Fake_Loss[0.790]
+    Saved train/batch000030_out.png
+Progress[  0%], ETA[200000m], Batch [  40], G_Loss[0.153], D_Real_Loss[0.730], D_Fake_Loss[0.691]
+    Saved train/batch000040_out.png
+Progress[  0%], ETA[200000m], Batch [  50], G_Loss[0.135], D_Real_Loss[0.732], D_Fake_Loss[0.764]
+    Saved train/batch000050_out.png
+Progress[  0%], ETA[200000m], Batch [  60], G_Loss[0.120], D_Real_Loss[0.698], D_Fake_Loss[0.765]
+    Saved train/batch000060_out.png
+Progress[  0%], ETA[200000m], Batch [  70], G_Loss[0.129], D_Real_Loss[0.697], D_Fake_Loss[0.699]
+    Saved train/batch000070_out.png
+Progress[  0%], ETA[200000m], Batch [  80], G_Loss[0.134], D_Real_Loss[0.751], D_Fake_Loss[0.726]
+    Saved train/batch000080_out.png
+Progress[  0%], ETA[200000m], Batch [  90], G_Loss[0.121], D_Real_Loss[0.697], D_Fake_Loss[0.706]
+    Saved train/batch000090_out.png
+Progress[  0%], ETA[200000m], Batch [ 100], G_Loss[0.114], D_Real_Loss[0.674], D_Fake_Loss[0.693]
+    Saved train/batch000100_out.png
+Progress[  0%], ETA[200000m], Batch [ 110], G_Loss[0.114], D_Real_Loss[0.654], D_Fake_Loss[0.685]
+    Saved train/batch000110_out.png
+Progress[  0%], ETA[200000m], Batch [ 120], G_Loss[0.115], D_Real_Loss[0.670], D_Fake_Loss[0.695]
+    Saved train/batch000120_out.png
+Progress[  0%], ETA[200000m], Batch [ 130], G_Loss[0.118], D_Real_Loss[0.736], D_Fake_Loss[0.702]
+    Saved train/batch000130_out.png
+Progress[  0%], ETA[200000m], Batch [ 140], G_Loss[0.119], D_Real_Loss[0.666], D_Fake_Loss[0.674]
+    Saved train/batch000140_out.png
+Progress[  0%], ETA[200000m], Batch [ 150], G_Loss[0.124], D_Real_Loss[0.693], D_Fake_Loss[0.666]
+    Saved train/batch000150_out.png
+Progress[  0%], ETA[200000m], Batch [ 160], G_Loss[0.147], D_Real_Loss[0.587], D_Fake_Loss[0.699]
+    Saved train/batch000160_out.png
+Progress[  0%], ETA[200000m], Batch [ 170], G_Loss[0.138], D_Real_Loss[0.650], D_Fake_Loss[0.682]
+    Saved train/batch000170_out.png
+Progress[  0%], ETA[200000m], Batch [ 180], G_Loss[0.119], D_Real_Loss[0.706], D_Fake_Loss[0.682]
+    Saved train/batch000180_out.png
+Progress[  0%], ETA[200000m], Batch [ 190], G_Loss[0.124], D_Real_Loss[0.658], D_Fake_Loss[0.686]
+    Saved train/batch000190_out.png
+Progress[  0%], ETA[200000m], Batch [ 200], G_Loss[0.119], D_Real_Loss[0.707], D_Fake_Loss[0.670]
+    Saved train/batch000200_out.png
+Progress[  0%], ETA[200000m], Batch [ 210], G_Loss[0.129], D_Real_Loss[0.650], D_Fake_Loss[0.681]
+    Saved train/batch000210_out.png
+Progress[  0%], ETA[200000m], Batch [ 220], G_Loss[0.115], D_Real_Loss[0.677], D_Fake_Loss[0.650]
+    Saved train/batch000220_out.png
+Progress[  0%], ETA[200000m], Batch [ 230], G_Loss[0.121], D_Real_Loss[0.714], D_Fake_Loss[0.657]
+    Saved train/batch000230_out.png
+Progress[  0%], ETA[200000m], Batch [ 240], G_Loss[0.114], D_Real_Loss[0.668], D_Fake_Loss[0.667]
+    Saved train/batch000240_out.png
+Progress[  0%], ETA[200000m], Batch [ 250], G_Loss[0.120], D_Real_Loss[0.669], D_Fake_Loss[0.615]
+    Saved train/batch000250_out.png
+Progress[  0%], ETA[200000m], Batch [ 260], G_Loss[0.108], D_Real_Loss[0.626], D_Fake_Loss[0.689]
+    Saved train/batch000260_out.png
+Progress[  0%], ETA[200000m], Batch [ 270], G_Loss[0.117], D_Real_Loss[0.643], D_Fake_Loss[0.676]
+    Saved train/batch000270_out.png
+Progress[  0%], ETA[200000m], Batch [ 280], G_Loss[0.116], D_Real_Loss[0.626], D_Fake_Loss[0.692]
+    Saved train/batch000280_out.png
+Progress[  0%], ETA[200000m], Batch [ 290], G_Loss[0.111], D_Real_Loss[0.594], D_Fake_Loss[0.702]
+    Saved train/batch000290_out.png
+Progress[  0%], ETA[200000m], Batch [ 300], G_Loss[0.124], D_Real_Loss[0.652], D_Fake_Loss[0.655]
+    Saved train/batch000300_out.png
+Progress[  0%], ETA[200000m], Batch [ 310], G_Loss[0.108], D_Real_Loss[0.616], D_Fake_Loss[0.733]
+    Saved train/batch000310_out.png
+Progress[  0%], ETA[200000m], Batch [ 320], G_Loss[0.122], D_Real_Loss[0.742], D_Fake_Loss[0.608]
+    Saved train/batch000320_out.png
+Progress[  0%], ETA[200000m], Batch [ 330], G_Loss[0.109], D_Real_Loss[0.628], D_Fake_Loss[0.659]
+    Saved train/batch000330_out.png
+Progress[  0%], ETA[200000m], Batch [ 340], G_Loss[0.114], D_Real_Loss[0.645], D_Fake_Loss[0.630]
+    Saved train/batch000340_out.png
+Progress[  0%], ETA[200000m], Batch [ 350], G_Loss[0.105], D_Real_Loss[0.601], D_Fake_Loss[0.683]
+    Saved train/batch000350_out.png
+Progress[  0%], ETA[199999m], Batch [ 360], G_Loss[0.123], D_Real_Loss[0.605], D_Fake_Loss[0.673]
+    Saved train/batch000360_out.png
+Progress[  0%], ETA[199999m], Batch [ 370], G_Loss[0.117], D_Real_Loss[0.675], D_Fake_Loss[0.607]
+    Saved train/batch000370_out.png
+Progress[  0%], ETA[199999m], Batch [ 380], G_Loss[0.116], D_Real_Loss[0.700], D_Fake_Loss[0.624]
+    Saved train/batch000380_out.png
+Progress[  0%], ETA[199999m], Batch [ 390], G_Loss[0.115], D_Real_Loss[0.641], D_Fake_Loss[0.656]
+    Saved train/batch000390_out.png
+Progress[  0%], ETA[199999m], Batch [ 400], G_Loss[0.125], D_Real_Loss[0.665], D_Fake_Loss[0.656]
+    Saved train/batch000400_out.png
+Progress[  0%], ETA[199999m], Batch [ 410], G_Loss[0.117], D_Real_Loss[0.597], D_Fake_Loss[0.647]
+    Saved train/batch000410_out.png
+Progress[  0%], ETA[199999m], Batch [ 420], G_Loss[0.120], D_Real_Loss[0.579], D_Fake_Loss[0.675]
+    Saved train/batch000420_out.png
+Progress[  0%], ETA[199999m], Batch [ 430], G_Loss[0.106], D_Real_Loss[0.693], D_Fake_Loss[0.720]
+    Saved train/batch000430_out.png
+Progress[  0%], ETA[199999m], Batch [ 440], G_Loss[0.146], D_Real_Loss[0.662], D_Fake_Loss[0.526]
+    Saved train/batch000440_out.png
+Progress[  0%], ETA[199999m], Batch [ 450], G_Loss[0.128], D_Real_Loss[0.839], D_Fake_Loss[0.530]
+    Saved train/batch000450_out.png
+Progress[  0%], ETA[199999m], Batch [ 460], G_Loss[0.118], D_Real_Loss[0.626], D_Fake_Loss[0.633]
+    Saved train/batch000460_out.png
+Progress[  0%], ETA[199999m], Batch [ 470], G_Loss[0.123], D_Real_Loss[0.587], D_Fake_Loss[0.636]
+    Saved train/batch000470_out.png
+Progress[  0%], ETA[199999m], Batch [ 480], G_Loss[0.159], D_Real_Loss[0.754], D_Fake_Loss[0.429]
+    Saved train/batch000480_out.png
+Progress[  0%], ETA[199999m], Batch [ 490], G_Loss[0.138], D_Real_Loss[0.716], D_Fake_Loss[0.501]
+    Saved train/batch000490_out.png
+Progress[  0%], ETA[199999m], Batch [ 500], G_Loss[0.126], D_Real_Loss[0.679], D_Fake_Loss[0.631]
+    Saved train/batch000500_out.png
+Progress[  0%], ETA[199999m], Batch [ 510], G_Loss[0.125], D_Real_Loss[0.756], D_Fake_Loss[0.602]
+    Saved train/batch000510_out.png
+Progress[  0%], ETA[199999m], Batch [ 520], G_Loss[0.124], D_Real_Loss[0.640], D_Fake_Loss[0.577]
+    Saved train/batch000520_out.png
+Progress[  0%], ETA[199999m], Batch [ 530], G_Loss[0.140], D_Real_Loss[0.566], D_Fake_Loss[0.477]
+    Saved train/batch000530_out.png
+Progress[  0%], ETA[199999m], Batch [ 540], G_Loss[0.120], D_Real_Loss[0.572], D_Fake_Loss[0.757]
+    Saved train/batch000540_out.png
+Progress[  0%], ETA[199999m], Batch [ 550], G_Loss[0.158], D_Real_Loss[0.796], D_Fake_Loss[0.419]
+    Saved train/batch000550_out.png
+Progress[  0%], ETA[199999m], Batch [ 560], G_Loss[0.105], D_Real_Loss[0.352], D_Fake_Loss[0.766]
+    Saved train/batch000560_out.png
+Progress[  0%], ETA[199999m], Batch [ 570], G_Loss[0.139], D_Real_Loss[0.680], D_Fake_Loss[0.643]
+    Saved train/batch000570_out.png
+Progress[  0%], ETA[199999m], Batch [ 580], G_Loss[0.119], D_Real_Loss[0.360], D_Fake_Loss[0.708]
+    Saved train/batch000580_out.png
+Progress[  0%], ETA[199999m], Batch [ 590], G_Loss[0.108], D_Real_Loss[0.516], D_Fake_Loss[0.738]
+    Saved train/batch000590_out.png
+Progress[  0%], ETA[199999m], Batch [ 600], G_Loss[0.168], D_Real_Loss[0.786], D_Fake_Loss[0.325]
+    Saved train/batch000600_out.png
+Progress[  0%], ETA[199999m], Batch [ 610], G_Loss[0.111], D_Real_Loss[0.614], D_Fake_Loss[0.713]
+    Saved train/batch000610_out.png
+Progress[  0%], ET
